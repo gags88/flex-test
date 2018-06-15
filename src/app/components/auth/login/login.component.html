@@ -1,0 +1,40 @@
+<div class="container" fxFill fxLayout="column wrap" fxLayoutAlign="center">
+  <div fxFlex="40%" fxLayoutAlign="center center">
+    <div class="logo">
+      <div class="logo-heading">
+        <span class="first-letter">S</span>chedule
+        <span class="first-letter">E</span>ase
+        <span class="first-letter">P</span>ortal
+      </div>
+    </div>
+  </div>
+  <div fxFlex="60%" class="login-card-section" fxLayout="column nowrap" fxLayoutAlign="center center">
+    <mat-card class="login-card">
+      <mat-card-title>
+        Login to your account
+      </mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="loginForm">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email Address" formControlName="email" required id="username">
+            <mat-error *ngIf="loginForm.controls.email.invalid">{{ getInvalidEmailErrorMessage() }}</mat-error>
+          </mat-form-field>
+          <!-- Markup for getting Username ends -->
+          <!-- Markup for getting Password starts -->
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Password" type="password" formControlName="password" required id="password">
+            <mat-error *ngIf="loginForm.controls.password.invalid">{{ getInvalidPasswordErrorMessage() }}</mat-error>
+          </mat-form-field>
+          <!-- Markup for getting Password ends -->
+        </form>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="space-between">
+        <mat-checkbox>Remember me</mat-checkbox>
+        <button mat-raised-button class="login-button" color="primary">
+          Log In
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    <a routerLink="/" class="forgot-password" fxFlex="80%">Forgot Password?</a>
+  </div>
+</div>
