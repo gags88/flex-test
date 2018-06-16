@@ -1,75 +1,9 @@
 @import 'variables.scss';
-.logo {
-    .logo-heading {
-        font-size: 2.5rem;
-        color: $primary-color;
-        font-weight: 100;
-        letter-spacing: 1pt;
-        @media screen and (max-width: 400px) {
-            font-size: 1.8rem;
-        }
-        .first-letter {
-            font-family: 'Roboto Condensed', Courier, monospace;
-            font-weight: 700;
-        }
-    }
-}
-
-.login-card-section {
-    background: #004867;
-    color: #fff;
-    .login-card {
-        min-width: 400px;
-        padding: 0;
-        top: -75px;
-        border-radius: 0;
-        @media screen and (max-width: 400px) {
-            min-width: 300px;
-            max-width: 300px;
-        }
-        .mat-card-title {
-            padding: 24px;
-            border-bottom: 1px solid #ccc;
-        }
-        .mat-card-content {
-            padding: 10px 24px 0 24px;
-            .mat-form-field {
-                margin-bottom: 1rem;
-            }
-        }
-        .mat-card-actions {
-            padding: 0 24px 24px;
-            margin: 0;
-        }
-        .login-button {
-            background: $secondary-color;
-            text-transform: uppercase;
-            width: 150px;
-        }
-    }
-}
-
 a {
     &.forgot-password {
         color: #fff;
         text-decoration: none;
         margin-top: -50px;
         font-weight: 300;
-    }
-}
-
-.full-width {
-    width: $full-width;
-}
-
-.validation-error {
-    background-color: #FFF0EF;
-    padding: 10px 10px 20px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    i.error {
-        color: #FF0000;
-        position: relative;
-        top: 6px;
     }
 }

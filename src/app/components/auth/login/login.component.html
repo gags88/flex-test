@@ -8,21 +8,21 @@
       </div>
     </div>
   </div>
-  <div fxFlex="60%" class="login-card-section" fxLayout="column nowrap" fxLayoutAlign="center center">
-    <mat-card class="login-card">
+  <div fxFlex="60%" class="sep-auth-card-section" fxLayout="column nowrap" fxLayoutAlign="center center">
+    <mat-card class="sep-auth-card">
       <mat-card-title>
         Login to your account
       </mat-card-title>
-      <mat-card-content>
-        <ng-template [ngIf]="invalidAttempt">
-          <div class="validation-error">
-            <i class="material-icons error">
-              cancel
-            </i>
-            Login Failed. Check you username and password.
-          </div>
-        </ng-template>
-        <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm">
+        <mat-card-content>
+          <ng-template [ngIf]="invalidAttempt">
+            <div class="validation-error" fxLayout="row nowrap" fxLayoutAlign="start center">
+              <i class="material-icons error">
+                cancel
+              </i>
+              Login Failed. Check you username and password.
+            </div>
+          </ng-template>
           <mat-form-field class="full-width">
             <input matInput placeholder="Email Address" formControlName="email" required id="username">
             <mat-error *ngIf="loginForm.controls.email.invalid">{{ invalidEmailError }}</mat-error>
@@ -34,15 +34,17 @@
             <mat-error *ngIf="loginForm.controls.password.invalid">{{ invalidPasswordError }}</mat-error>
           </mat-form-field>
           <!-- Markup for getting Password ends -->
-        </form>
-      </mat-card-content>
-      <mat-card-actions fxLayoutAlign="space-between">
-        <mat-checkbox>Remember me</mat-checkbox>
-        <button mat-raised-button class="login-button" color="primary">
-          Log In
-        </button>
-      </mat-card-actions>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="space-between center">
+          <mat-checkbox>
+            <small>Remember me</small>
+          </mat-checkbox>
+          <button mat-raised-button class="sep-auth-button" color="primary">
+            Log In
+          </button>
+        </mat-card-actions>
+      </form>
     </mat-card>
-    <a routerLink="/" class="forgot-password" fxFlex="80%">Forgot Password?</a>
+    <a routerLink="/forgot-password" class="forgot-password" fxFlex="80%">Forgot Password?</a>
   </div>
 </div>
