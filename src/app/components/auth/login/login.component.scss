@@ -61,3 +61,15 @@ a {
 .full-width {
     width: $full-width;
 }
+
+.validation-error {
+    background-color: #FFF0EF;
+    padding: 10px 10px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    i.error {
+        color: #FF0000;
+        position: relative;
+        top: 6px;
+    }
+}

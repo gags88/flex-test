@@ -20,13 +20,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  getInvalidEmailErrorMessage() {
+  get invalidEmailError() {
     return this.loginForm.controls['email'].hasError('required') ? 'Please provide your email address' :
       this.loginForm.controls['email'].hasError('pattern') ? 'This email address is not valid' :
         '';
   }
 
-  getInvalidPasswordErrorMessage() {
+  get invalidPasswordError() {
     return this.loginForm.controls['password'].hasError('required') ? 'Please provide your password' : '';
   }
 

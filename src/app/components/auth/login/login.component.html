@@ -14,16 +14,24 @@
         Login to your account
       </mat-card-title>
       <mat-card-content>
+        <ng-template [ngIf]="invalidAttempt">
+          <div class="validation-error">
+            <i class="material-icons error">
+              cancel
+            </i>
+            Login Failed. Check you username and password.
+          </div>
+        </ng-template>
         <form [formGroup]="loginForm">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email Address" formControlName="email" required id="username">
-            <mat-error *ngIf="loginForm.controls.email.invalid">{{ getInvalidEmailErrorMessage() }}</mat-error>
+            <mat-error *ngIf="loginForm.controls.email.invalid">{{ invalidEmailError }}</mat-error>
           </mat-form-field>
           <!-- Markup for getting Username ends -->
           <!-- Markup for getting Password starts -->
           <mat-form-field class="full-width">
             <input matInput placeholder="Password" type="password" formControlName="password" required id="password">
-            <mat-error *ngIf="loginForm.controls.password.invalid">{{ getInvalidPasswordErrorMessage() }}</mat-error>
+            <mat-error *ngIf="loginForm.controls.password.invalid">{{ invalidPasswordError }}</mat-error>
           </mat-form-field>
           <!-- Markup for getting Password ends -->
         </form>

@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+@import 'variables';
 html,
 body {
     box-sizing: border-box;
@@ -9,4 +10,13 @@ body {
     margin: 0;
     color: #262626;
     font-family: 'Roboto', Courier, monospace
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $secondary-color;
+}
+
+.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: $ripple-color !important
 }
