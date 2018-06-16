@@ -30,10 +30,10 @@ export class ResetPasswordComponent implements OnInit {
 
   get invalidConfirmPasswordError() {
     let errorString: any;
-    errorString = this.resetPasswordForm.controls['confirmPassword'].hasError('required') ? 'Confirm password can not be blank' : '';
-    if (this.resetPasswordForm.controls['confirmPassword'].hasError('match')) {
-      errorString = 'Confirm password do not match';
-    }
+    errorString = this.resetPasswordForm.controls['confirmPassword'].hasError('required') ?
+      'Confirm password can not be blank' :
+      this.resetPasswordForm.controls['confirmPassword'].hasError('match') ?
+        'Confirm password do not match' : '';
     return errorString;
   }
 

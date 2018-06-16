@@ -12,6 +12,6 @@ export function matchOtherValidator(otherControlName: string): ValidatorFn {
                     subscription.unsubscribe();
                 });
         }
-        return (otherControl && !control.hasError('required') && control.value !== otherControl.value) ? { match: true } : null;
+        return (otherControl && control.value !== otherControl.value) ? { match: true } : null;
     };
 }
