@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { matchOtherValidator } from '../../../validators/matchOtherValidator';
+import { PasswordValidator } from '../../../validators/password.validator';
 
 @Component({
   selector: 'app-reset-password',
@@ -15,7 +16,7 @@ export class ResetPasswordComponent implements OnInit {
 
   ngOnInit() {
     this.resetPasswordForm = new FormGroup({
-      password: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required, PasswordValidator.strong]),
       confirmPassword: new FormControl('', [Validators.required, matchOtherValidator('password')])
     });
   }
