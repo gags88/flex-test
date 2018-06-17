@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 @import 'variables';
 html,
 body {
@@ -19,11 +17,10 @@ body {
         color: $primary-color;
         font-weight: 100;
         letter-spacing: 1pt;
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 767px) {
             font-size: 1.8rem;
         }
         .first-letter {
-            font-family: 'Roboto Condensed', Courier, monospace;
             font-weight: 700;
         }
     }
@@ -38,14 +35,14 @@ a {
     background: #004867;
     color: #fff;
     .sep-auth-card {
-        min-width: 400px;
+        min-width: 420px;
         max-width: 420px;
         padding: 0;
         top: -75px;
         border-radius: 0;
-        @media screen and (max-width: 400px) {
-            min-width: 300px;
-            max-width: 300px;
+        @media screen and (max-width: 767px) {
+            min-width: 310px;
+            max-width: 310px;
         }
         .mat-card-title {
             padding: 24px;
