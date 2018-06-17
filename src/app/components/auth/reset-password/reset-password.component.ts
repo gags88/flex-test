@@ -11,6 +11,7 @@ import { PasswordValidator } from '../../../validators/password.validator';
 export class ResetPasswordComponent implements OnInit {
 
   resetPasswordForm: FormGroup;
+  confirm_hide: boolean;
 
   constructor() { }
 
