@@ -9,7 +9,8 @@ body {
     height: 100%;
     margin: 0;
     color: #262626;
-    font-family: 'Roboto', Courier, monospace
+    font-family: 'Roboto', Courier, monospace;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -63,7 +64,7 @@ a {
         .sep-auth-button {
             background: $secondary-color;
             text-transform: uppercase;
-            width: 150px;
+            width: 120px;
         }
     }
 }
