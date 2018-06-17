@@ -9,17 +9,11 @@ import { MaterialModule } from './material.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './components/auth/reset-password/reset-password.component';
-import { PasswordCheckComponent } from './components/password-check/password-check.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent,
-    PasswordCheckComponent
   ],
   imports: [
     BrowserModule,
